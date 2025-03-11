@@ -1,8 +1,8 @@
 # Use Nginx as base image
 FROM nginx:alpine
 
-# Copy the HTML file to the Nginx serve directory
-COPY src/index.html /usr/share/nginx/html/index.html
+# Copy the entire src directory to the Nginx serve directory
+COPY src/ /usr/share/nginx/html/
 
 # Create custom Nginx config with stub_status enabled
 RUN mkdir -p /etc/nginx/conf.d
